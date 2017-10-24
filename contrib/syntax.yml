@@ -22,7 +22,7 @@ ruby:
   after: ['^#!', '^#.*encoding:']
   comment:
     open:   '# '
-    close:  '\n'
+    close:  '\n\n'
     prefix: ''
 
 perl:
@@ -151,9 +151,9 @@ shell:
   ext:  ['.sh']
   after: ['^#!']
   comment:
-    open:   '#\n'
-    close:  '#\n'
-    prefix: '# '
+    open:   '# '
+    close:  '\n'
+    prefix: ''
 
 # Use "-- " to make sure e.g. MySQL understands it
 sql:
@@ -177,9 +177,9 @@ xml:
 yaml:
   ext:  ['.yml', '.yaml']
   comment:
-    open:   '#\n'
-    close:  '#\n'
-    prefix: '# '
+    open:   '# '
+    close:  '\n\n'
+    prefix: ''
 
 action_script:
   ext: ['.as']
