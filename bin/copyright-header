@@ -19,7 +19,7 @@
 # along with Copyright Header.  If not, see <http://www.gnu.org/licenses/>.
 #
 $:.unshift(File.expand_path('.')) # Ruby 1.9 doesn't have . in the load path...
-$:.push(File.expand_path('lib/')) 
+$:.push(File.expand_path(File.dirname(__FILE__) + '/../lib/')) 
 
 require 'rubygems'
 require 'copyright_header'
