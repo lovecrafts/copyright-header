@@ -21,9 +21,9 @@ ruby:
   ext: ['.rb', '.rake']
   after: ['^#!', '^#.*encoding:']
   comment:
-    open:   '#\n'
-    close:  '#\n'
-    prefix: '# '
+    open:   '# '
+    close:  '\n'
+    prefix: ''
 
 perl:
   ext: ['.pl']
@@ -52,27 +52,42 @@ html:
     close:  '-->\n'
     prefix: '    '
 
+phtml:
+  ext: ['.phtml']
+  comment:
+    open:   '<?php // '
+    close:  ' ?>\n'
+    prefix: ''
+
 php:
   ext: ['.php']
-  after: [ '^#!' ]
+  after: ['^#!', '^<\?php']
   comment:
-    open:   '<?php \n/*\n'
-    close:  ' */ ?>\n'
-    prefix: ' * '
+    open:   '// '
+    close:  '\n'
+    prefix: ''
+
+behat:
+  ext: ['.feature']
+  comment:
+    open:   '# '
+    close:  '\n\n'
+    prefix: ''
 
 javacript:
   ext: ['.js']
   comment:
-    open:   '/*\n'
-    close:  ' */\n\n'
-    prefix: ' * '
+    open:   '// '
+    close:  '\n'
+    prefix: ''
 
 css:
   ext: ['.css']
+  after: ['^\@charset']
   comment:
-    open:   '/*\n'
-    close:  ' */\n\n'
-    prefix: ' * '
+    open:   '/* '
+    close:  ' */\n'
+    prefix: ''
 
 c:
   ext: ['.c', '.h']
@@ -155,9 +170,9 @@ xml:
   ext: ['.xml', '.xsd', '.mxml']
   after: ['^<\?']
   comment:
-    open:   '<!--\n'
-    close:  '-->\n'
-    prefix: '    '
+    open:   '<!-- '
+    close:  ' -->\n'
+    prefix: ''
 
 yaml:
   ext:  ['.yml', '.yaml']
@@ -176,9 +191,9 @@ action_script:
 sass:
   ext: ['.sass', '.scss']
   comment:
-    open:   '/*\n'
-    close:  ' */\n\n'
-    prefix: ' * '
+    open:   '// '
+    close:  '\n\n'
+    prefix: ''
 
 verilog:
   ext: ['.v', '.sv']
